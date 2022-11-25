@@ -1,0 +1,25 @@
+.header__title {
+  font-family: "Neonderthaw", cursive;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  color: #f249c5;
+  animation: flicker 3.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%,
+  20%,
+  24%,
+  27%,
+  56%,
+  60%,
+  100% {
+    text-shadow: 0 0 42px #b84298, 0 0 82px #b84298, 0 0 92px #b84298,
+      0 0 102px #b84298, 0 0 151px #b84298;
+  }
+  22%,
+  26%,
+  58% {
+    text-shadow: none;
+  }
+}

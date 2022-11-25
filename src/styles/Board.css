@@ -1,0 +1,30 @@
+.board {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 2px;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff;
+}
+
+.board--win {
+  color: white;
+  font-family: "Bungee Outline", cursive;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  padding: 0 20px;
+  text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white;
+}
+
+.board--btn {
+  margin-top: 40px;
+  width: 400px;
+  height: 60px;
+  font-size: 1.5rem;
+  font-family: monospace;
+  color: #f249c5;
+  box-shadow: 0 0 10px #b84298, 0 0 20px #b84298;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: none;
+}

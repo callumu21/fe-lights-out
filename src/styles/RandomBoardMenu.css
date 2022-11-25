@@ -1,0 +1,42 @@
+.random-form {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.random-form__difficulty {
+  display: flex;
+  gap: 50px;
+}
+
+.random-form__difficulty-label--unchecked {
+  color: white;
+}
+
+.random-form__difficulty-label--checked {
+  color: yellow;
+}
+
+.random-form__checkbox--hidden {
+  visibility: hidden;
+}
+
+.random-form__submit-btn {
+  width: 250px;
+  height: 75px;
+  font-size: 2rem;
+  font-family: monospace;
+  color: #f249c5;
+  box-shadow: 0 0 10px #b84298, 0 0 20px #b84298;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: none;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.random-form__submit-btn:hover {
+  background-color: #c71597;
+  color: rgb(26, 1, 19);
+}

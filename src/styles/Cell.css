@@ -1,0 +1,18 @@
+.cell--light-on {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #53dcd2;
+  border: none;
+  margin: 20px;
+  box-shadow: 0 0 10px #53dcd2, 0 0 20px #53dcd2;
+}
+
+.cell--light-off {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  margin: 20px;
+  background-color: rgb(55, 55, 55);
+}
