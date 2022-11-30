@@ -40,3 +40,8 @@
   background-color: #c71597;
   color: rgb(26, 1, 19);
 }
+
+.random-form__error {
+  font-size: 1.5rem;
+  color: white;
+}

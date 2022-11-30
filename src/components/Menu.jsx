@@ -1,6 +1,6 @@
 import "../styles/Menu.css";
 
-const Menu = ({ setIsReady, setIsInTutorial }) => {
+const Menu = ({ setIsReady, setIsInTutorial, setIsOnHomeScreen }) => {
   return (
     <section className="menu">
       <button
@@ -8,6 +8,7 @@ const Menu = ({ setIsReady, setIsInTutorial }) => {
         onClick={() => {
           setIsReady(true);
           setIsInTutorial(true);
+          setIsOnHomeScreen(false);
         }}
       >
         Tutorial
@@ -17,6 +18,7 @@ const Menu = ({ setIsReady, setIsInTutorial }) => {
         onClick={() => {
           setIsReady(true);
           setIsInTutorial(false);
+          setIsOnHomeScreen(false);
         }}
       >
         Random

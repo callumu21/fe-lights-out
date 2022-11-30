@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const GridSizeSelector = ({ gridSize, rows, setSize }) => {
+const GridSizeSelector = ({ gridSize, size, rows, setSize }) => {
   const [selectedStatus, setSelectedStatus] = useState("unchecked");
 
   return (
@@ -10,12 +10,14 @@ const GridSizeSelector = ({ gridSize, rows, setSize }) => {
         type="checkbox"
         className="random-form__checkbox--hidden"
         onChange={() => {
-          setSelectedStatus((currStatus) => {
-            return currStatus === "unchecked" ? "checked" : "unchecked";
-          });
-          setSize((currSize) => {
-            return currSize === null ? rows : null;
-          });
+          if (!size || size === rows) {
+            setSelectedStatus((currStatus) => {
+              return currStatus === "unchecked" ? "checked" : "unchecked";
+            });
+            setSize((currSize) => {
+              return currSize === null ? rows : null;
+            });
+          }
         }}
       />
     </label>

@@ -1,9 +1,34 @@
+.header {
+  margin: 30px;
+}
+
 .header__title {
+  margin: 0 auto;
   font-family: "Neonderthaw", cursive;
   font-size: 4rem;
   letter-spacing: 5px;
   color: #f249c5;
   animation: flicker 3.5s infinite alternate;
+}
+
+.header__home-btn {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 250px;
+  height: 50px;
+  font-size: 1rem;
+  font-family: monospace;
+  color: #f249c5;
+  box-shadow: 0 0 10px #b84298, 0 0 20px #b84298;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: none;
+}
+
+.header__home-btn:hover {
+  background-color: #c71597;
+  color: rgb(26, 1, 19);
 }
 
 @keyframes flicker {

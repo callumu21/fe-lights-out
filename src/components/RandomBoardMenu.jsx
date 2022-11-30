@@ -6,36 +6,41 @@ import RandomBoard from "./RandomBoard";
 const RandomBoardMenu = () => {
   const [size, setSize] = useState(null);
   const [isInMenu, setIsInMenu] = useState(true);
+  const [error, setError] = useState("");
 
   const gridSizes = [
-    { size: "Small", rows: 3 },
-    { size: "Medium", rows: 5 },
-    { size: "Large", rows: 7 },
+    { gridSize: "Small", rows: 3 },
+    { gridSize: "Medium", rows: 5 },
+    { gridSize: "Large", rows: 7 },
   ];
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(size);
     if (size) {
       setIsInMenu(false);
+      setError("");
+    } else {
+      setError("Please select a grid size");
     }
   };
 
   return isInMenu ? (
     <form className="random-form" onSubmit={handleSubmit}>
       <div className="random-form__difficulty">
-        {gridSizes.map(({ size, rows }) => (
+        {gridSizes.map(({ gridSize, rows }) => (
           <GridSizeSelector
-            gridSize={size}
+            key={gridSize}
+            gridSize={gridSize}
             rows={rows}
-            key={size}
             setSize={setSize}
+            size={size}
           />
         ))}
       </div>
       <button type="submit" className="random-form__submit-btn">
         Create Grid
       </button>
+      <p className="random-form__error">{error}</p>
     </form>
   ) : (
     <RandomBoard size={size} setIsInMenu={setIsInMenu} setSize={setSize} />
