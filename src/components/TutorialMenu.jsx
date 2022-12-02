@@ -13,7 +13,7 @@ const TutorialMenu = () => {
         <li key={level}>
           <button
             key={level}
-            className="tutorial-list__btn"
+            className="menu--btn"
             onClick={() => {
               setLevel(level);
               setIsInMenu(false);

@@ -1,34 +1,60 @@
 .header {
-  margin: 30px;
+  margin: 3rem;
 }
 
 .header__title {
   margin: 0 auto;
   font-family: "Neonderthaw", cursive;
-  font-size: 4rem;
+  font-size: 6rem;
   letter-spacing: 5px;
   color: #f249c5;
   animation: flicker 3.5s infinite alternate;
 }
 
 .header__home-btn {
+  cursor: pointer;
+  width: 250px;
+  height: 50px;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
   position: absolute;
   top: 50px;
   left: 50px;
-  width: 250px;
-  height: 50px;
+
   font-size: 1rem;
   font-family: monospace;
-  color: #f249c5;
-  box-shadow: 0 0 10px #b84298, 0 0 20px #b84298;
-  cursor: pointer;
-  border-radius: 1rem;
-  border: none;
+  color: hsl(317 100% 54%);
+  text-shadow: 0 0 0.125em hsl(0, 0%, 100% / 0.5), 0 0 0.125em currentColor;
+
+  background-color: hsl(323 21% 16%);
+  border: hsl(317 100% 54%) 3px solid;
+  box-shadow: inset 0 0 0.5em 0 hsl(317 100% 54%), 0 0 0.5em 0 hsl(317 100% 54%);
 }
 
-.header__home-btn:hover {
-  background-color: #c71597;
-  color: rgb(26, 1, 19);
+.header__home-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em hsl(317 100% 54%);
+  opacity: 0;
+}
+
+.header__home-btn:hover,
+.header__home-btn:focus {
+  background-color: hsl(317 100% 54%);
+  color: hsl(323 21% 16%);
+  text-shadow: none;
+}
+
+.header__home-btn:hover::before {
+  opacity: 1;
+}
+
+.header__home-btn:hover::after {
+  opacity: 1;
 }
 
 @keyframes flicker {
@@ -46,5 +72,11 @@
   26%,
   58% {
     text-shadow: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion) {
+  header__title {
+    animation: none;
   }
 }

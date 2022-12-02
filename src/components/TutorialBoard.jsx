@@ -29,9 +29,9 @@ const TutorialBoard = ({ level, setIsInMenu, setSize }) => {
 
   return (
     <>
-      <div className="board">
+      <div className={hasWon(board) ? "board--win" : "board"}>
         {hasWon(board) ? (
-          <div className="board--win">Congratulations!</div>
+          <div className="board--win-message">Congratulations!</div>
         ) : (
           gridDisplay
         )}

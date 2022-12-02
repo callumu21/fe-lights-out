@@ -1,4 +1,5 @@
 import "../styles/Menu.css";
+import "../styles/NeonButton.css";
 
 const Menu = ({ setIsReady, setIsInTutorial, setIsOnHomeScreen }) => {
   return (

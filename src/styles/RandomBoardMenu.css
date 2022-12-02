@@ -2,12 +2,16 @@
   font-size: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 20px;
 }
 
 .random-form__difficulty {
-  display: flex;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  font-size: 2.5rem;
+  gap: 40px;
 }
 
 .random-form__difficulty-label--unchecked {
@@ -15,30 +19,56 @@
 }
 
 .random-form__difficulty-label--checked {
-  color: yellow;
+  color: hsl(317 100% 54%);
 }
 
 .random-form__checkbox--hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .random-form__submit-btn {
-  width: 250px;
-  height: 75px;
-  font-size: 2rem;
-  font-family: monospace;
-  color: #f249c5;
-  box-shadow: 0 0 10px #b84298, 0 0 20px #b84298;
   cursor: pointer;
-  border-radius: 1rem;
-  border: none;
-  margin: 0 auto;
-  margin-top: 50px;
+  width: 400px;
+  height: 60px;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  position: relative;
+  margin-top: 40px;
+
+  font-size: 1.5rem;
+  font-family: monospace;
+  color: hsl(317 100% 54%);
+  text-shadow: 0 0 0.125em hsl(0, 0%, 100% / 0.5), 0 0 0.125em currentColor;
+
+  background-color: hsl(323 21% 16%);
+  border: hsl(317 100% 54%) 4px solid;
+  box-shadow: inset 0 0 0.5em 0 hsl(317 100% 54%), 0 0 0.5em 0 hsl(317 100% 54%);
 }
 
-.random-form__submit-btn:hover {
-  background-color: #c71597;
-  color: rgb(26, 1, 19);
+.random-form__submit-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em hsl(317 100% 54%);
+  opacity: 0;
+}
+
+.random-form__submit-btn:hover,
+.random-form__submit-btn:focus {
+  background-color: hsl(317 100% 54%);
+  color: hsl(323 21% 16%);
+  text-shadow: none;
+}
+
+.random-form__submit-btn:hover::before {
+  opacity: 1;
+}
+
+.random-form__submit-btn:hover::after {
+  opacity: 1;
 }
 
 .random-form__error {

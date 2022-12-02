@@ -1,4 +1,5 @@
 import "../styles/RandomBoardMenu.css";
+import "../styles/NeonButton.css";
 import { useState } from "react";
 import GridSizeSelector from "./GridSizeSelector";
 import RandomBoard from "./RandomBoard";
