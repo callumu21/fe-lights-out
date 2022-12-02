@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .random-form__difficulty {
